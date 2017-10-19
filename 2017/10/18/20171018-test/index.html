@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>基于Hexo+Github快速搭建个人博客 | 一个人的自白</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="小记：花了半天时间，基于Hexo和GitHub搭建了一个简单的静态个人博客，在网上参考了不少资料，但总觉不够系统和正确，下面实录自己的搭建过程，备忘和供同好参考  ##一、工具准备 ##   Hexo     Hexo是一个简单、快捷且功能强大的开源博客框架，支持Markdown语法，有大量的免费皮肤可以使用。  Hexo的安装十分简单，关键步骤如下，详细内容请参考Hexo官网：  $ npm">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于Hexo+Github快速搭建个人博客">
+<meta property="og:url" content="http://22th.top/2017/10/18/20171018-test/index.html">
+<meta property="og:site_name" content="一个人的自白">
+<meta property="og:description" content="小记：花了半天时间，基于Hexo和GitHub搭建了一个简单的静态个人博客，在网上参考了不少资料，但总觉不够系统和正确，下面实录自己的搭建过程，备忘和供同好参考  ##一、工具准备 ##   Hexo     Hexo是一个简单、快捷且功能强大的开源博客框架，支持Markdown语法，有大量的免费皮肤可以使用。  Hexo的安装十分简单，关键步骤如下，详细内容请参考Hexo官网：  $ npm">
+<meta property="og:image" content="http://22th.top/2017/10/18/20171018-test/first-doc.png">
+<meta property="og:updated_time" content="2017-10-19T03:14:17.374Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于Hexo+Github快速搭建个人博客">
+<meta name="twitter:description" content="小记：花了半天时间，基于Hexo和GitHub搭建了一个简单的静态个人博客，在网上参考了不少资料，但总觉不够系统和正确，下面实录自己的搭建过程，备忘和供同好参考  ##一、工具准备 ##   Hexo     Hexo是一个简单、快捷且功能强大的开源博客框架，支持Markdown语法，有大量的免费皮肤可以使用。  Hexo的安装十分简单，关键步骤如下，详细内容请参考Hexo官网：  $ npm">
+<meta name="twitter:image" content="http://22th.top/2017/10/18/20171018-test/first-doc.png">
+  
+    <link rel="alternative" href="/atom.xml" title="一个人的自白" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-20171018-test" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基于Hexo+Github快速搭建个人博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2017/10/18/20171018-test/" class="article-date">
+  <time datetime="2017-10-17T16:00:00.000Z" itemprop="datePublished">2017-10-18</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>小记：花了半天时间，基于Hexo和GitHub搭建了一个简单的静态个人博客，在网上参考了不少资料，但总觉不够系统和正确，下面实录自己的搭建过程，备忘和供同好参考</p>
+</blockquote>
+<p>##一、工具准备 ##</p>
+<ul>
+<li><ol>
+<li>Hexo</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>Hexo是一个简单、快捷且功能强大的开源博客框架，支持Markdown语法，有大量的免费皮肤可以使用。</p>
+</blockquote>
+<p>Hexo的安装十分简单，关键步骤如下，详细内容请参考<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>官网：<br><code></code></p>
+<pre>
+$ npm install hexo-cli -g
+$ hexo init blog
+$ cd blog
+$ npm install
+$ hexo server</pre>
+
+> <span style="font-weight:bold">问题：Hexo Server启动后默认使用4000端口，在Windows上可能会使用无法访问问题，建议使用 -p port指定端口启动，本人使用的是8090端口，启动后效果如下图：<br>
+![Hexo 首次启动后页面](images/hexo-server-index.png)
+</span>
+
+- 2. GitHub个人博客及域名绑定
+> GitHub为每个用户提供了1G的静态空间，可以做为个人博客空间，相关搭建方式，可以参考文章[利用GitHub建立你的个人网站](http://blog.csdn.net/u012422829/article/details/46285577)，这里不再赘述。
+
+- 3. Markdown编辑器
+> Markdown做为一种电子邮件风格的标记语言，具有纯文本的强兼容能力，可以使写作者专注文字而不是排版，格式转换方便，可以方便地转换为Html、PDF，并且有极好的标记语法可读性。随着GitHub、简书等内容平台的兴起，已经成为大部分博客写作的事实标准。Markdown的语法学习请走这个[传送门](http://www.jianshu.com/p/q81RER)。因为社区成熟，也有大量的编辑器工具可供使用，个人推荐 [MarkDownPad](http://www.markdownpad.com)（on Windows）和 [ByWord](https://bywordapp.com/)（on ios)。
+
+
+##二、主要步骤 ##
+
+- ### Hexo皮肤选择与安装 ###
+
+打开Hexo网站，选择Themes,从中选择你喜欢的皮肤,进入GitHub上按作者给出的Readme进行安装，比如我选择的是[Jane](https://github.com/hejianxian/hexo-theme-jane)这个主题的皮肤，作者有详细的安装介绍，这里不做复述，请大家参考。
+
+
+- ### 让你的Hexo与GitHub关联 ###
+
+与GitHub关联是非常重要的一步，关系到后续你是否可以有效发布。
+其实方法很简单，打开Hexo初始化的目录，按前文假定的Blog目录，打开根下的_config.yml文件，编辑下述内容
+
+<code>
+<pre>
+deploy:
+  type: git
+  repo: https://github.com/yourGitHubAccount/yourGitHubAccount.github.io.git
+</pre>
+</code>
+> 注：Hexo其实可以关联很多不同的空间提供者，感兴趣的同仁可以自行学习探索。
+
+- ### 撰写你的博文 ###
+
+打开你的MarkdownPad或Byword开始你的第一篇博文吧！，记得把文章存储到Hexo初始化好的那个Blog目录下的./source/_posts/子目录下。
+
+- ### 生成并发布 ###
+
+用以下命令生成并上传发布：
+
+<pre>
+$ hexo clean
+$ hexo generate
+$ hexo deploy
+</pre>
+
+<blockquote>
+<p>注：我通常将这三个命令打包在一个shell批处理文件，并通过Schedule设定一个提交时间，如每天晚上9：00，这样每天就会自动将文章发布到个人博客站点的，自己仅关注把博文写得精彩充实即可。</p>
+</blockquote>
+<p>下面是我的首篇文章的效果：<br><img src="/2017/10/18/20171018-test/first-doc.png" alt="我的首篇博文"></p>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/18/20171018-personalBlog/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          基于Hexo+Github快速搭建个人博客
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/17/20171017-beginning/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">写给自己</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  			<li><a href="https://github.com/jackiealb" target="_blank"><i class="icon icon-github"></i></a></li>
+  		
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+	<div id="footer-info" class="inner">
+	  &copy; 2017 <a href="mailto:xiegz@163.com">书海拾贝</a> 
+	  - Powered by <a href="http://22th.top/" target="_blank">the 22th.</a>
+	</div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="https://github.com/jackiealb" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
