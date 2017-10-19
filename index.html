@@ -53,8 +53,7 @@
         <blockquote>
 <p>小记：花了半天时间，基于Hexo和GitHub搭建了一个简单的静态个人博客，在网上参考了不少资料，但总觉不够系统和正确，下面实录自己的搭建过程，备忘和供同好参考</p>
 </blockquote>
-<p>##一、工具准备 ##</p>
-<ul>
+<h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><ul>
 <li><ol>
 <li>Hexo</li>
 </ol>
@@ -71,9 +70,10 @@ $ cd blog
 $ npm install
 $ hexo server</pre>
 
-> <span style="font-weight:bold">问题：Hexo Server启动后默认使用4000端口，在Windows上可能会使用无法访问问题，建议使用 -p port指定端口启动，本人使用的是8090端口，启动后效果如下图：<br>
+
+> 问题：Hexo Server启动后默认使用4000端口，在Windows上可能会使用无法访问问题，建议使用 -p port指定端口启动，本人使用的是8090端口，启动后效果如下图：
+
 ![Hexo 首次启动后页面](20171019-createPersonalBlog-md/hexo-server-index.png)
-</span>
 
 - 2. GitHub个人博客及域名绑定
 > GitHub为每个用户提供了1G的静态空间，可以做为个人博客空间，相关搭建方式，可以参考文章[利用GitHub建立你的个人网站](http://blog.csdn.net/u012422829/article/details/46285577)，这里不再赘述。
@@ -81,15 +81,14 @@ $ hexo server</pre>
 - 3. Markdown编辑器
 > Markdown做为一种电子邮件风格的标记语言，具有纯文本的强兼容能力，可以使写作者专注文字而不是排版，格式转换方便，可以方便地转换为Html、PDF，并且有极好的标记语法可读性。随着GitHub、简书等内容平台的兴起，已经成为大部分博客写作的事实标准。Markdown的语法学习请走这个[传送门](http://www.jianshu.com/p/q81RER)。因为社区成熟，也有大量的编辑器工具可供使用，个人推荐 [MarkDownPad](http://www.markdownpad.com)（on Windows）和 [ByWord](https://bywordapp.com/)（on ios)。
 
+## 主要步骤 ##
 
-##二、主要步骤 ##
+- **Hexo皮肤选择与安装**
 
-- ### Hexo皮肤选择与安装 ###
-
-打开Hexo网站，选择Themes,从中选择你喜欢的皮肤,进入GitHub上按作者给出的Readme进行安装，比如我选择的是[Jane](https://github.com/hejianxian/hexo-theme-jane)这个主题的皮肤，作者有详细的安装介绍，这里不做复述，请大家参考。
+打开Hexo网站，选择Themes,从中选择你喜欢的皮肤,进入GitHub上按作者给出的Readme进行安装，比如我选择的是:[Jane](https://github.com/hejianxian/hexo-theme-jane)这个主题的皮肤，作者有详细的安装介绍，这里不做复述，请大家参考。
 
 
-- ### 让你的Hexo与GitHub关联 ###
+- **让你的Hexo与GitHub关联**
 
 与GitHub关联是非常重要的一步，关系到后续你是否可以有效发布。
 其实方法很简单，打开Hexo初始化的目录，按前文假定的Blog目录，打开根下的_config.yml文件，编辑下述内容
@@ -101,13 +100,16 @@ deploy:
   repo: https://github.com/yourGitHubAccount/yourGitHubAccount.github.io.git
 </pre>
 </code>
+
 > 注：Hexo其实可以关联很多不同的空间提供者，感兴趣的同仁可以自行学习探索。
 
-- ### 撰写你的博文 ###
+
+- **撰写你的博文**
 
 打开你的MarkdownPad或Byword开始你的第一篇博文吧！，记得把文章存储到Hexo初始化好的那个Blog目录下的./source/_posts/子目录下。
 
-- ### 生成并发布 ###
+
+- **生成并发布**
 
 用以下命令生成并上传发布：
 
