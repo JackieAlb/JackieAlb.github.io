@@ -51,10 +51,66 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>花了一天时间，搭建了一个简单的个人博客，觉得网上很多材料。。。。</p>
+<p>小记：花了半天时间，基于Hexo和GitHub搭建了一个简单的静态个人博客，在网上参考了不少资料，但总觉不够系统和正确，下面实录自己的搭建过程，备忘和供同好参考</p>
 </blockquote>
-<p>#一、准备</p>
-<p>##1.1</p>
+<p>##一、工具准备 ##</p>
+<ul>
+<li><ol>
+<li>Hexo</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>Hexo是一个简单、快捷且功能强大的开源博客框架，支持Markdown语法，有大量的免费皮肤可以使用。</p>
+</blockquote>
+<p>Hexo的安装十分简单，关键步骤如下，详细内容请参考<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>官网：<br><code></code></p>
+<p><pre><br>$ npm install hexo-cli -g<br>$ hexo init blog<br>$ cd blog<br>$ npm install<br>$ hexo server</pre><br></p>
+<blockquote>
+<p><span style="font-weight:bold">问题：Hexo Server启动后默认使用4000端口，在Windows上可能会使用无法访问问题，建议使用 -p port指定端口启动，本人使用的是8090端口，启动后效果如下图：<br><br><img src="./images/hexo-server-index.png" alt="Hexo 首次启动后页面"><br></span></p>
+</blockquote>
+<ul>
+<li><ol>
+<li>GitHub个人博客及域名绑定<blockquote>
+<p>GitHub为每个用户提供了1G的静态空间，可以做为个人博客空间，相关搭建方式，可以参考文章<a href="http://blog.csdn.net/u012422829/article/details/46285577" target="_blank" rel="external">利用GitHub建立你的个人网站</a>，这里不再赘述。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol>
+<li>Markdown编辑器<blockquote>
+<p>Markdown做为一种电子邮件风格的标记语言，具有纯文本的强兼容能力，可以使写作者专注文字而不是排版，格式转换方便，可以方便地转换为Html、PDF，并且有极好的标记语法可读性。随着GitHub、简书等内容平台的兴起，已经成为大部分博客写作的事实标准。Markdown的语法学习请走这个<a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">传送门</a>。因为社区成熟，也有大量的编辑器工具可供使用，个人推荐 <a href="http://www.markdownpad.com" target="_blank" rel="external">MarkDownPad</a>（on Windows）和 <a href="https://bywordapp.com/" target="_blank" rel="external">ByWord</a>（on ios)。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+<p>##二、主要步骤 ##</p>
+<ul>
+<li><h3 id="Hexo皮肤选择与安装"><a href="#Hexo皮肤选择与安装" class="headerlink" title="Hexo皮肤选择与安装"></a>Hexo皮肤选择与安装</h3></li>
+</ul>
+<p>打开Hexo网站，选择Themes,从中选择你喜欢的皮肤,进入GitHub上按作者给出的Readme进行安装，比如我选择的是<a href="https://github.com/hejianxian/hexo-theme-jane" target="_blank" rel="external">Jane</a>这个主题的皮肤，作者有详细的安装介绍，这里不做复述，请大家参考。</p>
+<ul>
+<li><h3 id="让你的Hexo与GitHub关联"><a href="#让你的Hexo与GitHub关联" class="headerlink" title="让你的Hexo与GitHub关联"></a>让你的Hexo与GitHub关联</h3></li>
+</ul>
+<p>与GitHub关联是非常重要的一步，关系到后续你是否可以有效发布。<br>其实方法很简单，打开Hexo初始化的目录，按前文假定的Blog目录，打开根下的_config.yml文件，编辑下述内容</p>
+<p><code></code></p>
+<p><pre><br>deploy:<br>  type: git<br>  repo: <a href="https://github.com/yourGitHubAccount/yourGitHubAccount.github.io.git" target="_blank" rel="external">https://github.com/yourGitHubAccount/yourGitHubAccount.github.io.git</a><br></pre><br></p>
+<blockquote>
+<p>注：Hexo其实可以关联很多不同的空间提供者，感兴趣的同仁可以自行学习探索。</p>
+</blockquote>
+<ul>
+<li><h3 id="撰写你的博文"><a href="#撰写你的博文" class="headerlink" title="撰写你的博文"></a>撰写你的博文</h3></li>
+</ul>
+<p>打开你的MarkdownPad或Byword开始你的第一篇博文吧！，记得把文章存储到Hexo初始化好的那个Blog目录下的./source/_posts/子目录下。</p>
+<ul>
+<li><h3 id="生成并发布"><a href="#生成并发布" class="headerlink" title="生成并发布"></a>生成并发布</h3></li>
+</ul>
+<p>用以下命令生成并上传发布：</p>
+<p><pre><br>$ hexo clean<br>$ hexo generate<br>$ hexo deploy<br></pre></p>
+<blockquote>
+<p>注：我通常将这三个命令打包在一个shell批处理文件，并通过Schedule设定一个提交时间，如每天晚上9：00，这样每天就会自动将文章发布到个人博客站点的，自己仅关注把博文写得精彩充实即可。</p>
+</blockquote>
+<p>下面是我的首篇文章的效果：<br><img src="./images/first-doc.png" alt="我的首篇博文"></p>
 
       
 
